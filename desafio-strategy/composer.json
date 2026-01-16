@@ -1,0 +1,13 @@
+{
+    "name": "estudos/desafio-strategy",
+    "description": "Estudo do padrão Strategy em PHP",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./"
+        }
+    },
+    "require": {
+        "php": ">=8.1"
+    }
+}
