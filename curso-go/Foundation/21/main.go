@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"math"
+
+	"curso-go/math"
 )
 
 func main() {
 	s := math.Sum(10, 20)
-	fmt.Println("Resultado: %v", s)
+	fmt.Printf("Resultado: %v", s)
 }
