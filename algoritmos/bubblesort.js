@@ -40,16 +40,24 @@
 
 const array = [42, 7, 19, 3, 56, 11, 29, 4, 33, 18, 25, 2, 50, 9, 61];
 
-function bubbleSort(arr){
-  let arrayLength = array.length;
-  for (let i = 0; i <= arrayLength-1; i++) {
-    for(let o = 0; o < arrayLength; o++){  
-      if(array[o] > array[o+1]){
-        [array[o], array[o+1]] = [array[o+1], array[o]]
-      }
+function bubbleSort(arr) {
+    const n = arr.length;
+    let swapped;
+
+    for (let i = 0; i < n - 1; i++) {
+        swapped = false;
+
+        for (let j = 0; j < n - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                swapped = true;
+            }
+        }
+
+        if (!swapped) break;
     }
-  }
-  return array.length
+
+    return arr;
 }
 
-bubbleSort(array)
+bubbleSort(array);
